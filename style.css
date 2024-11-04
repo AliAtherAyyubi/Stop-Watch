@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: none;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    position: relative;
+    background-color: rgb(22, 230, 157);
+    margin: 3cm auto;
+    height: 650px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 20px 0px rgb(196, 196, 196);
+    display: flex;
+    flex-direction: column;align-items: center;
+}
+.container .header{
+    text-align: center;
+    padding-top: 20px;font-weight: bold;
+    font-size: 3em;color: rgb(255, 255, 255);
+}
+.digits-container{
+    position: relative;
+    display: flex;align-items: center;justify-content: center;
+    height: 300px;width: 300px;
+    border: 3px solid black;border-radius: 50%;
+    margin-top: 2em;outline: 5px solid rgb(255, 255, 255);
+}
+.digits-box .digit{
+    position: relative;
+    left: -10px;
+    color: rgb(0, 0, 0);
+    font-size: 3em;
+    font-weight: bold;
+}
+#millisecond{
+    position: absolute;
+    top: 125px;right: 15px;
+}
+.control-btns{
+    position: absolute;
+    bottom: 135px;
+    display: flex;
+}
+.btn{
+    height: 70px;width: 70px;color: white;
+    font-size: 1.2em;font-weight: bold;
+    background-color: rgb(198, 54, 220);
+    border-radius: 50%;
+    display: flex;justify-content: center;align-items: center;
+    outline: none;
+    cursor: pointer;border: none;
+    transition: 0.3s ease;
+}
+.btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.btn .icon{
+   font-size: 1.6em;
+   transition: 0.3s ease;
+}
+.control-btns .btn.active #play-icon{
+    display: none;
+}
+.control-btns .btn.active #pause-icon{
+    display: block;
+}
+.control-btns #play-pause-btn{
+    position: relative;
+}
+#play-pause-btn .play-pause{
+    position: absolute;
+}
+#pause-icon{
+    display: none;
+}
+
+
+.btn:hover{
+    background-color: white;
+    box-shadow: 0px 1px 20px 0px rgb(194, 194, 194);
+}
+.btn:hover .icon{
+    color: rgb(170, 0, 0);
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width:450px){
+    .container{
+        width: 350px;
+    }
+}
+
+
